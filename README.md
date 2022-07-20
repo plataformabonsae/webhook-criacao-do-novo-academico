@@ -36,6 +36,7 @@
 | variável | tipo | Descrição |
 | --- | --- | --- |
 | token | string | Token de acesso |
+| schoolPeriod | string | Nome do Período Letivo |
 | name | string | Nome da Turma |
 | code | string | Código da Turma |
 | start_date | date | Quando a turma inicia |
