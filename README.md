@@ -4,9 +4,28 @@
 *No novo modelo do acadêmico da Bonsae, pense na estrutura de cadastro das Turmas em 4 "caixas": Período Letivo > Turmas > Disciplinas > Práticas. O Período Letivo detém as datas de início e fim das turmas que, consequentemente influenciam as datas de início e fim das disciplinas e práticas vinculadas a elas. Esclarecendo a orientação acima, é possível puxar as informações das práticas a qualquer momento ou configurar para que os dados sejam puxados ao final de um período letivo.
 
  OBS.: Primeiramente deve-se ter um Período Letivo Cadastrado no Sistema, e ele deve ter data inicial e final que englobem todas as outras. Ou seja, nenhuma outra data cadastrada deve começar antes da data inicial do período, nem terminar depois da data final do mesmo.
+ 
+ *"instancia" nas URLs abaixo se referem ao nome da IES, campus ou unidade que a insituição irá implantar a Bonsae. De acordo com a quantidade de campus, a URL pode ter um ou dois formatos. Exemplo de formatos.: "[unit.bonsae.com.br](http://unit.bonsae.com.br)" ou "[unit.aracaju.bonsae.com.br](http://unit.aracaju.bonsae.com.br)". Confirme com a coordenação do curso ou com a própria equipe Bonsae qual dos dois formatos será utilizado para o seu caso específico.
+
+### Criação de Período Letivo:
+
+##### Rota - POST: 
+#
+> url:[https://instancia.bonsae.com.br/api/webhook/create-school-period](https://instancia.bonsae.com.br/api/webhook/create-school-period)
+
+##### Dados a serem enviados:
+
+#
+| variável | tipo | Descrição |
+| --- | --- | --- |
+| token | string | Token de acesso |
+| name | string | Nome do Período, para identificação |
+| school_period | string | Período Letivo (1° Semestre, 2° Semestre, 1° Semestre 1° Bimestre, 1° Semestre 2° Bimestre, 2° Semestre 1° Bimestre ou 2° Semestre 2° Bimestre) |
+| start_date | date | Quando o período inicia |
+| final_date | date | Quando o período finaliza |
 
 ### Criação de Turma:
-*"instancia" na URL abaixo se refere ao nome da IES, campus ou unidade que a insituição irá implantar a Bonsae. De acordo com a quantidade de campus, a URL pode ter um ou dois formatos. Exemplo de formatos.: "[unit.bonsae.com.br](http://unit.bonsae.com.br)" ou "[unit.aracaju.bonsae.com.br](http://unit.aracaju.bonsae.com.br)". Confirme com a coordenação do curso ou com a própria equipe Bonsae qual dos dois formatos será utilizado para o seu caso específico.
+
 ##### Rota - POST: 
 #
 > url:[https://instancia.bonsae.com.br/api/webhook/create-class](https://instancia.bonsae.com.br/api/webhook/create-class)
