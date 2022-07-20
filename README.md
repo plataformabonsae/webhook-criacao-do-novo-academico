@@ -135,6 +135,7 @@ Para qualquer uma das rotas acima citadas, o retorno em caso de sucesso da requi
 ```sh
 {
     "token":"auth_token_api_274319732!", 
+    "schoolPeriod":"2022.2", 
     "name":"Turma 001", 
     "code":"T001", 
     "start_date":"11/07/2022", 
